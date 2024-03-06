@@ -1,0 +1,31 @@
+hub:
+  config:
+    NbGrader:
+      # Whether the form for creating an assignment should include a section
+      # where assignments can be fetched from an existing repository
+      fetch_assignment:
+
+      # Whether the form for creating an assignment should include a section
+      # where assignments can be copied from another existing assignment
+      copy_assignment:
+
+      # The URL of the repository where nbgrader assignments are stored.
+      # This is where nbgrader will fetch assignments from when doing the
+      # `nbgrader assign` or `nbgrader fetch` commands. This can be either a
+      # URL on the filesystem (e.g. in a shared folder, or a directory that
+      # is managed by a version control system), or it can be a URL for a git
+      # repository. If this is a URL for a git repository, it must be
+      # compatible with the `git clone` command. If this is a URL for a shared
+      # filesystem, it must be a URL that can be used with `rsync`. For
+      # example, this might be a path on a shared filesystem (e.g. the
+      # directory that is mounted by a network file system), or it might be a
+      # path in a git repository that has been cloned to the local
+      # filesystem.
+      assignment_repo: "/path/to/nbgrader/exchange"
+
+      # The nbgrader exchange directory writable to both the hub and the
+      # notebook server. This is where assignments are stored when they are
+      # created or fetched, before they are assigned out to students. It must
+      # be a path on the filesystem that is readable and writable to both the
+      # hub and the notebook server.
+      exchange_directory: "/path/to/nbgrader/exchange"
